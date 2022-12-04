@@ -37,14 +37,14 @@ fn items_matches_in_packs(packs: &[String]) -> Vec<char> {
         for p in pack.chars() {
             comp.entry(p).or_insert(1);
         }
+    });
 
-        comps[0].iter().for_each(|(key, _)| {
-            let in_all = comps[1..].iter().all(|comp| comp.get(key).is_some());
+    comps[0].iter().for_each(|(key, _)| {
+        let in_all = comps[1..].iter().all(|comp| comp.get(key).is_some());
 
-            if in_all {
-                matches.push(*key)
-            }
-        });
+        if in_all {
+            matches.push(*key)
+        }
     });
 
     matches

@@ -3,6 +3,10 @@ use std::fs::File;
 use std::io::{self, BufRead};
 use std::{str, vec};
 
+pub type Coordinate = (usize, usize);
+
+pub fn distance_between(x: Coordinate, y: Coordinate) {}
+
 pub fn read_lines(filepath: &str) -> Result<Vec<String>, Box<dyn Error>> {
     let line_buff = create_file_buffer(filepath).lines();
 

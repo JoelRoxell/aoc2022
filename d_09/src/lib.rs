@@ -1,6 +1,5 @@
 use std::collections::HashSet;
 
-#[derive(Debug, Clone)]
 pub enum Direction {
     Up,
     Right,
